@@ -214,7 +214,7 @@ button {
   /* transform: rotate(-90deg); */
   border-radius: 100%;
   border: 1px solid #fff;
-  fill: #fff;
+  background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
