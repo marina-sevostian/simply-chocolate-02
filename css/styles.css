@@ -95,6 +95,7 @@ button {
   letter-spacing: -0.02em;
   display: block;
   color: #111;
+  transition: color 250ms ease-in-out;
 }
 
 .menu-link:hover,
@@ -119,6 +120,14 @@ button {
 .social-header-vector {
   stroke-width: 2px;
   stroke: #111;
+  /* transition: fill 250ms ease-in-out; */
+  transition: stroke 250ms ease-in-out;
+}
+.social-header-vector:hover,
+.social-header-vector:focus {
+  /* fill: #fd9222; */
+  stroke-width: 2px;
+  stroke: #fd9222;
 }
 
 /* #endregion header */
@@ -207,6 +216,11 @@ button {
 
 .hero-scroll-svg {
   fill: #fd9222;
+  transition: fill 250ms linear;
+}
+.hero-scroll-svg:hover,
+.hero-scroll-svg:focus {
+  fill: #fff;
 }
 .hero-scroll-svg-border {
   width: 22px;
@@ -219,6 +233,12 @@ button {
   align-items: center;
   justify-content: center;
   margin-left: 14px;
+  transition: background-color 250ms linear, transform 250ms ease-in-out;
+}
+.hero-scroll-svg-border:hover,
+.hero-scroll-svg-border:focus {
+  background-color: #fd9222;
+  transform: rotate(-90deg);
 }
 /* #endregion hero */
 /* #region advantages */
@@ -562,14 +582,14 @@ button {
   flex-direction: column;
   gap: 14px;
 }
-.adress-footer-item {
+.adress-footer-title {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.29;
   text-align: center;
   color: #fff;
 }
-.tel-mailto-adress-footer {
+.adress-footer-link {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.29;
@@ -592,5 +612,10 @@ button {
   letter-spacing: -0.02em;
   display: block;
   color: #fff;
+  transition: color 250ms ease-in-out;
+}
+.nav-footer-link:hover,
+.nav-footer-link:focus {
+  color: #fd9222;
 }
 /* #endregion footer */
