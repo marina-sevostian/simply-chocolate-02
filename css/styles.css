@@ -78,17 +78,22 @@ button {
   letter-spacing: -0.03em;
   color: #111;
   padding: 28px 0;
+  position: relative;
 }
 
 .logo-header-span {
   font-style: italic;
 }
-
+.logo-header-vector {
+  position: absolute;
+  fill: #fd9222;
+}
 .menu-link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: -0.02em;
+  display: block;
   color: #111;
 }
 
@@ -96,13 +101,40 @@ button {
 .menu-link:focus {
   color: #fd9222;
 }
+.social-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 18px;
+}
+.navigation-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 90px;
+}
+
+.social-header-vector {
+  stroke-width: 2px;
+  stroke: #111;
+}
 
 /* #endregion header */
 /* #region hero */
 .hero-section {
   background-color: #1e1823;
-  padding: 381px 0 40px 0;
+  padding: 381px 56px 40px 56px;
   border-radius: 30px;
+  background-image: linear-gradient(
+      rgba(30, 24, 35, 0.4),
+      rgba(30, 24, 35, 0.4)
+    ),
+    url(../images/chocolate-covered-cocoa.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-title {
@@ -114,21 +146,9 @@ button {
   margin-bottom: 32px;
   max-width: 484px;
 }
-
-.hero-link-all {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-direction: row;
-  gap: 545px;
-}
-
 .hero-link-button {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: row;
-  gap: 14px;
+  align-items: center;
 }
 
 .hero-button {
@@ -137,7 +157,12 @@ button {
   color: #fff;
   background-color: #fd9222;
   border-radius: 100px;
+  border: none;
+  margin-right: 14px;
+  min-width: 144px;
+  height: 45px;
   padding: 14px 40px;
+  transition: color 250ms ease-in-out, background-color 250ms ease-in-out;
 }
 
 .hero-button:hover,
@@ -153,12 +178,16 @@ button {
   border: 1px solid #fff;
   border-radius: 100px;
   padding: 14px 40px;
+  min-width: 183px;
+  height: 45px;
+  display: block;
+  transition: color 250ms ease-in-out, border 250ms ease-in-out;
 }
 
 .hero-how-made:hover,
 .hero-how-made:focus {
   color: #fd9222;
-  border: 1px solid #fd9222;
+  border-color: #fd9222;
 }
 
 .hero-scroll {
@@ -167,11 +196,28 @@ button {
   line-height: 1.29;
   letter-spacing: -0.03em;
   color: #fff;
+  margin-left: auto;
+  transition: color 250ms ease-in-out;
 }
 
 .hero-scroll:hover,
 .hero-scroll:focus {
   color: #fd9222;
+}
+
+.hero-scroll-svg {
+  fill: #fd9222;
+}
+.hero-scroll-svg-border {
+  width: 38px;
+  height: 38px;
+  /* transform: rotate(-90deg); */
+  border-radius: 100%;
+
+  fill: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 /* #endregion hero */
 /* #region advantages */
@@ -189,6 +235,18 @@ button {
 
 .advantages-list-item {
   width: calc((100% - 140px) / 3);
+  position: relative;
+}
+
+.advantages-list-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 124px;
+  background-color: rgba(255, 255, 255, 0.5);
+  right: -18px;
 }
 
 .advantages-item-title {
@@ -197,6 +255,21 @@ button {
   line-height: 1.22;
   color: #fff;
   margin-bottom: 18px;
+}
+
+.advantages-item-border {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.advantages-item-icon {
+  fill: #fd9222;
 }
 .advantages-item-text {
   font-weight: 400;
@@ -267,6 +340,8 @@ button {
 .ingredients-item {
   border-radius: 15px;
   padding: 28px 32px 28px;
+  /* width: calc((100% - 19px * 3) / 4); */
+  width: 270px;
 }
 .ingredients-item:nth-child(2n) {
   background: #fff;
@@ -324,6 +399,8 @@ button {
   justify-content: flex-start;
   flex-direction: column;
   gap: 28px;
+  padding: 32px;
+  border-radius: 15px;
 }
 
 .how-made-section-list-text {
@@ -333,7 +410,7 @@ button {
   flex-direction: column;
   gap: 24px;
 }
-.how-made-section-item {
+.how-made-section-item-title {
   font-weight: 600;
   font-size: 18px;
   line-height: 1.33;
@@ -345,6 +422,23 @@ button {
   line-height: 1.29;
   letter-spacing: -0.02em;
   color: #111;
+  position: relative;
+}
+
+.how-made-section-text::before {
+  display: block;
+  content: "";
+  position: absolute;
+  border-radius: 100%;
+  /* fill: #4c4c4c; */
+  stroke-width: 1px;
+  stroke: #eceded;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -18px;
+  width: 8px;
+  height: 8px;
+  background-color: #4c4c4c;
 }
 /* #endregion how made */
 /* #region chocolate-is-loved */
@@ -418,6 +512,7 @@ button {
   border-radius: 100px;
   padding: 14px 40px;
   min-width: 222px;
+  transition: color 250ms ease-in-out, background-color 250ms ease-in-out;
 }
 .leave-a-review-button:hover,
 .leave-a-review-button:focus {
@@ -456,7 +551,9 @@ button {
 .footer-title-span {
   color: #fff;
 }
-
+.footer-address {
+  font-style: normal;
+}
 .adress-footer {
   display: flex;
   align-items: flex-start;
@@ -476,7 +573,7 @@ button {
   font-size: 14px;
   line-height: 1.29;
   letter-spacing: -0.02em;
-  text-align: center;
+  display: block;
   color: #fff;
 }
 
@@ -492,6 +589,7 @@ button {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: -0.02em;
+  display: block;
   color: #fff;
 }
 /* #endregion footer */

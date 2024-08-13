@@ -23,22 +23,37 @@
     <!-- #region header -->
     <header class="header-all">
       <div class="container header-container">
-        <a class="logo" href="./index.html"
-          ><span class="logo-header-span">SIMPLY</span> CHOCOLATE</a
-        >
-        <nav class="navigation">
-          <ul class="menu">
-            <li class="menu-item">
-              <a class="menu-link" href="./index.html">Home</a>
-            </li>
-            <li class="menu-item">
-              <a class="menu-link" href="#">How it’s made?</a>
-            </li>
-            <li class="menu-item">
-              <a class="menu-link" href="#">Chocolate is loved</a>
-            </li>
-          </ul>
-        </nav>
+        <div class="logo-container">
+          <a class="logo" href="./index.html"
+            ><span class="logo-header-span">SIMPLY</span> CHOCOLATE</a
+          >
+          <svg class="logo-header-vector" width="21" height="24">
+            <use href="./images/icons.svg#icon-chocolate"></use>
+          </svg>
+        </div>
+        <div class="navigation-container">
+          <nav class="navigation">
+            <ul class="menu">
+              <li class="menu-item">
+                <a class="menu-link" href="./index.html">Home</a>
+              </li>
+              <li class="menu-item">
+                <a class="menu-link" href="#">How it’s made?</a>
+              </li>
+              <li class="menu-item">
+                <a class="menu-link" href="#">Chocolate is loved</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="social-header-container">
+            <svg class="social-header-vector" width="24" height="24">
+              <use href="./images/icons.svg#icon-instagram"></use>
+            </svg>
+            <svg class="social-header-vector" width="24" height="24">
+              <use href="./images/icons.svg#icon-twitter"></use>
+            </svg>
+          </div>
+        </div>
       </div>
     </header>
     <!-- #endregion header -->
@@ -50,12 +65,16 @@
             Treat yourself or a loved one to our finest ingredients for a moment
             of pure delight!
           </h1>
-          <div class="hero-link-all">
-            <div class="hero-link-button">
-              <button class="hero-button" type="button">Buy now</button>
-              <a class="hero-how-made" href="#">How it’s made</a>
-            </div>
+          <div class="hero-link-button">
+            <button class="hero-button" type="button">Buy now</button>
+            <a class="hero-how-made" href="#">How it’s made</a>
             <a class="hero-scroll" href="#footer">scroll down</a>
+
+            <div class="hero-scroll-svg-border">
+              <svg class="hero-scroll-svg" width="22" height="22">
+                <use href="./images/icons.svg#icon-scroll"></use>
+              </svg>
+            </div>
           </div>
         </div>
       </section>
@@ -66,6 +85,11 @@
           <h2 class="visually-hidden">Advantages</h2>
           <ul class="advantages-list">
             <li class="advantages-list-item">
+              <div class="advantages-item-border">
+                <svg class="advantages-item-icon" width="32" height="32">
+                  <use href="./images/icons.svg#icon-bar"></use>
+                </svg>
+              </div>
               <h3 class="advantages-item-title">Unsurpassed taste</h3>
               <p class="advantages-item-text">
                 Crafted with the finest quality cocoa beans and a dedication to
@@ -75,6 +99,11 @@
               </p>
             </li>
             <li class="advantages-list-item">
+              <div class="advantages-item-border">
+                <svg class="advantages-item-icon" width="32" height="32">
+                  <use href="./images/icons.svg#icon-coin"></use>
+                </svg>
+              </div>
               <h3 class="advantages-item-title">Affordable price</h3>
               <p class="advantages-item-text">
                 Indulge in high-quality chocolate without breaking the bank with
@@ -85,6 +114,11 @@
               </p>
             </li>
             <li class="advantages-list-item">
+              <div class="advantages-item-border">
+                <svg class="advantages-item-icon" width="32" height="32">
+                  <use href="./images/icons.svg#icon-spoon"></use>
+                </svg>
+              </div>
               <h3 class="advantages-item-title">Own production</h3>
               <p class="advantages-item-text">
                 We take pride in our own production process, ensuring that every
@@ -119,7 +153,7 @@
               <img
                 src="./images/milk-chocolate.png"
                 alt="milk-chocolate"
-                width="214"
+                width="206"
                 height="160"
               />
               <p class="ingredients-text">MILK CHOCOLATE</p>
@@ -128,7 +162,7 @@
               <img
                 src="./images/milk.png"
                 alt="milk"
-                width="214"
+                width="206"
                 height="160"
               />
               <p class="ingredients-text">MILK</p>
@@ -137,7 +171,7 @@
               <img
                 src="./images/nuts.png"
                 alt="nuts"
-                width="214"
+                width="206"
                 height="160"
               />
               <p class="ingredients-text">NUTS</p>
@@ -146,7 +180,7 @@
               <img
                 src="./images/sweet-chocolate.png"
                 alt="sweet-chocolate"
-                width="214"
+                width="206"
                 height="160"
               />
               <p class="ingredients-text">SEMI - SWEET CHOCOLATE</p>
@@ -169,36 +203,36 @@
               height="400"
             />
             <ul class="how-made-section-list">
-              <h4 class="how-made-section-item">
+              <h4 class="how-made-section-item-title">
                 Try our chocolates today and discover the perfect balance of
                 flavor
               </h4>
               <ul class="how-made-section-list-text">
-                <li>
+                <li class="how-made-section-item">
                   <p class="how-made-section-text">
                     Heat the milk in a saucepan without bringing it to a boil.
                     Add sugar and cocoa powder.
                   </p>
                 </li>
-                <li>
+                <li class="how-made-section-item">
                   <p class="how-made-section-text">
                     At the same time, prepare a water bath. Melt the butter on
                     it.
                   </p>
                 </li>
-                <li>
+                <li class="how-made-section-item">
                   <p class="how-made-section-text">
                     "Mix" the milk mixture and already liquid butter. Mix
                     thoroughly with a silicone spatula so that the mass becomes
                     uniform and silky.
                   </p>
                 </li>
-                <li>
+                <li class="how-made-section-item">
                   <p class="how-made-section-text">
                     Heat the mixture over low heat, letting it barely boil.
                   </p>
                 </li>
-                <li>
+                <li class="how-made-section-item">
                   <p class="how-made-section-text">
                     Pour the chocolate into special containers (can be replaced
                     with ice molds). Allow to cool and harden.
