@@ -379,6 +379,85 @@ button {
   color: #fff;
 }
 
+.ingredients-item {
+  position: relative;
+  overflow: hidden;
+}
+.ingredients-cover-overlay {
+  position: absolute;
+  top: 0;
+  background-color: #fff;
+  border-radius: 15px;
+  height: 100%;
+  left: 0;
+  padding: 20px;
+  transform: translateY(100%);
+  transition: transform 300ms linear;
+}
+.ingredients-item:hover .ingredients-cover-overlay {
+  transform: translate(0);
+}
+.ingredients-cover-overlay {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 14px;
+}
+.ingredients-cover-title-overlay {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 8px;
+}
+.ingredients-cover-title {
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: #111;
+}
+.ingredients-cover-button-overlay {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 6px;
+}
+
+.ingredients-cover-button {
+  border-radius: 35px;
+  padding: 6px 16px;
+  background: #fd9222;
+  min-width: 81px;
+  min-height: 24px;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.2;
+  color: #fff;
+  border: none;
+}
+.ingredients-cover-benifits {
+  border: 1px solid #fd9222;
+  border-radius: 35px;
+  background: #fafafa;
+  padding: 6px 16px;
+  min-width: 93px;
+  min-height: 24px;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.2;
+  color: #111;
+}
+.ingredients-cover-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  color: #111;
+  text-transform: none;
+}
 /* #endregion ingredients */
 /* #region how made */
 
