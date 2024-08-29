@@ -28,6 +28,8 @@ p {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 button {
@@ -120,12 +122,11 @@ button {
 .social-header-vector {
   stroke-width: 2px;
   stroke: #111;
-  /* transition: fill 250ms ease-in-out; */
+  fill: none;
   transition: stroke 250ms ease-in-out;
 }
 .social-header-vector:hover,
 .social-header-vector:focus {
-  /* fill: #fd9222; */
   stroke-width: 2px;
   stroke: #fd9222;
 }
@@ -584,7 +585,20 @@ button {
   color: #111;
 }
 .chocolate-is-loved-list-item {
-  width: calc((100% - 56px) / 3);
+  width: calc((100% - 54px) / 3);
+  background-color: #ffffff;
+  box-shadow: 0 9px 100px 0 rgba(17, 17, 17, 0.03);
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-radius: 15px;
+  padding: 56px 24px 24px 24px;
+  position: relative;
+}
+
+.chocolate-is-loved-list-img {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translate(-50%);
 }
 
 .chocolate-is-loved-item-text {
@@ -698,3 +712,209 @@ button {
   color: #fd9222;
 }
 /* #endregion footer */
+/* #region modal */
+.backdrop {
+  position: fixed;
+  top: 0;
+  z-index: 9999999;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 47, 66, 0.4);
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: visibility 300ms linear, opacity 300ms linear,
+    pointer-events 300ms linear;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  width: 517px;
+  min-height: 794px;
+  background-color: #fafafa;
+  padding: 40px;
+}
+
+.backdrop.is-open {
+  visibility: visible;
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.modal-close-btn {
+  display: flex;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  stroke: #111111;
+  background-color: transparent;
+  border: none;
+  width: 28px;
+  height: 28px;
+  line-height: 0;
+  stroke-width: 1px;
+  padding: 0;
+  transition: stroke 300ms linear;
+  cursor: pointer;
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  stroke: #fd9222;
+}
+
+.modal-text {
+  font-weight: 600;
+  font-size: 24px;
+
+  line-height: 1.16;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: #111;
+  width: 298px;
+  margin-bottom: 42px;
+}
+
+.orange {
+  color: #fd9222;
+}
+
+.form-wrraper-cont {
+  margin-bottom: 18px;
+}
+
+.modal-form-label {
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: rgba(64, 64, 64, 0.3);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.modal-cont-input {
+  position: relative;
+}
+
+.modal-input {
+  width: 100%;
+  height: 68px;
+  border: 1px solid rgba(17, 17, 17, 0.08);
+  border-radius: 13px;
+  padding-left: 68px;
+  outline: none;
+  transition: border 300ms linear;
+}
+
+.modal-input:focus {
+  border-color: #fd9222;
+}
+
+.modal-icon {
+  position: absolute;
+  top: 50%;
+  left: 24px;
+  transform: translateY(-50%);
+  stroke: #111111;
+  fill: none;
+  transition: stroke 300ms linear;
+}
+
+.modal-input:focus + .modal-icon {
+  stroke: #fd9222;
+}
+
+.form-wrraper-cont-coment {
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: rgba(64, 64, 64, 0.3);
+}
+
+.modal-form-label-coment {
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: rgba(64, 64, 64, 0.3);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.form-wrraper-cont-coment {
+  margin-bottom: 18px;
+}
+
+.modal-textarea {
+  border: 1px solid black;
+  border-radius: 13px;
+  padding: 22px 24px 24px 24px;
+  width: 436px;
+  height: 137px;
+  resize: none;
+  outline: none;
+  display: block;
+}
+
+.modal-textarea:focus {
+  border-color: #fd9222;
+}
+
+.modal-textarea::placeholder {
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: -0.02em;
+  color: rgba(64, 64, 64, 0.3);
+}
+
+.modal-cont-checkbox {
+  margin-bottom: 40px;
+}
+
+.custom-checkbox {
+  border-radius: 6px;
+  border: 1px solid rgba(17, 17, 17, 0.14);
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 12px;
+}
+
+.custom-label-user-checkbox {
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: rgba(64, 64, 64, 0.6);
+}
+
+.privacy-policy {
+  text-decoration: underline;
+
+  color: #fd9222;
+}
+
+.checkbox:checked + .custom-label-user-checkbox > .custom-checkbox {
+  border-color: transparent;
+  background-color: #fd9222;
+}
+
+.modal-submit {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  background-color: #fd9222;
+  border-radius: 100px;
+  padding: 14px 40px;
+  min-width: 117px;
+  height: 45px;
+  border: none;
+}
+/* #endregion modal */
