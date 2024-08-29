@@ -776,9 +776,12 @@ button {
 .subscribe-nav-footer-container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  /* justify-content: center; */
   flex-direction: row;
-  gap: 358px;
+  /* gap: 358px; */
+  max-width: 1136px;
+  height: 52px;
 }
 
 /* #endregion footer */
